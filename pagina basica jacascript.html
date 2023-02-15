@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Página com botões e menu em JavaScript</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      /* Estilos CSS para o menu */
+      #menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        font-size: 1.2em;
+      }
+
+      #menu a {
+        color: #fff;
+        text-decoration: none;
+        padding: 5px;
+      }
+
+      #menu a:hover {
+        background-color: #555;
+      }
+
+      /* Estilos CSS para os botões */
+      .button {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 10px;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background-color: #3e8e41;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Menu -->
+    <div id="menu">
+      <a href="#">Home</a>
+      <a href="#">Produtos</a>
+      <a href="#">Contato</a>
+    </div>
+
+    <!-- Conteúdo da página -->
+    <div id="content">
+      <h1>Bem-vindo à minha página com botões e menu em JavaScript</h1>
+      <p>Aqui você encontrará diversos botões para testar funcionalidades implementadas em JavaScript.</p>
+      <button class="button" onclick="alert('Botão clicado!')">Clique aqui</button>
+      <button class="button" onclick="toggleText()">Mostrar/Esconder texto</button>
+      <p id="toggleable-text" style="display: none;">Este é um texto que pode ser mostrado ou escondido através do botão acima.</p>
+    </div>
+
+    <script>
+      // Função para mostrar/ocultar um elemento HTML
+      function toggleElement(elementId) {
+        var element = document.getElementById(elementId);
+        if (element.style.display === 'none') {
+          element.style.display = 'block';
+        } else {
+          element.style.display = 'none';
+        }
+      }
+
+      // Função para mostrar/ocultar o texto
+      function toggleText() {
+        toggleElement('toggleable-text');
+      }
+    </script>
+  </body>
+</html>
